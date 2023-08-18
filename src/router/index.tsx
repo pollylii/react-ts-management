@@ -2,7 +2,6 @@ import React, { lazy } from "react"
 // Navigate重定向组件
 import { Navigate } from "react-router-dom"
 import Home from "../views/Home"
-const Login = lazy(() => import("../views/Login"))
 const Page1 = lazy(() => import("../views/Page1"))
 const Page2 = lazy(() => import("../views/Page2"))
 const Page3 = lazy(() => import("@/views/Page3"))
@@ -13,10 +12,6 @@ const withLoadingComponent = (comp: JSX.Element) => (
 )
 const routes = [
     // 嵌套路由 开始-------------------
-    {
-        path: "/login",
-        element: <Login />
-    },
     {
         path: "/",
         element: <Home />,
